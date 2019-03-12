@@ -38,7 +38,13 @@ public class QueueHospital<PatientType> extends Hospital<PatientType>{
 	
 	public String allPatientInfo()
 	{
-		return String.format("A %s-type hospital with %d patients.", this.hospitalType(), this.numPatients());
+		String info = "";
+		for(PatientType p: patientQueue)
+		{
+			info += p;
+		}
+		
+		return info;
 	}
 
 }
