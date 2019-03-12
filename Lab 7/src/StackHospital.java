@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 
 public class StackHospital<PatientType> extends Hospital<PatientType> {
 
@@ -7,6 +8,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	{
 		
 	}
+	
 	
 	public void addPatient(PatientType patient)
 	{
