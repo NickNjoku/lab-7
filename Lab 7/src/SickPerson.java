@@ -18,16 +18,32 @@ public class SickPerson extends Person {
 	
 	protected int compareToImpl(Person p)
 	{
+		int num=0;
 		
-		if(!(this.getClass().equals(p.getClass())))
+		// p isn't a SickPerson object
+		if(!(p instanceof SickPerson))
 		{
-			return 0;
+			num = 0;
+		}
+		SickPerson otherSick = (SickPerson) p;
+		
+		if(this.getSeverity() < otherSick.getSeverity()) 
+		{
+			num = -1;
+		}
+		if(this.getSeverity() > otherSick.getSeverity())
+		{
+			num = 1;
 		}
 		
-		if() 
+		if(this.getSeverity() == otherSick.getSeverity())
 		{
-			
+			num = 0;
 		}
+		return num;
+		
+		
+		
 	}
 	
 	public String toString()
