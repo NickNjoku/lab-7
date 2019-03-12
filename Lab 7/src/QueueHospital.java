@@ -7,7 +7,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType>{
 	
 	public QueueHospital()
 	{
-		this.patientQueue = patientQueue;
+		this.patientQueue = patientQueue;  
 	}
 	
 	

@@ -1,4 +1,3 @@
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class StackHospital<PatientType> extends Hospital<PatientType> {
@@ -7,18 +6,19 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	
 	public StackHospital()
 	{
-		this.stack= stack;
+		
+		
 	}
 	
 	
 	public void addPatient(PatientType patient)
 	{
-		stack.push(patient);
+		stack.push(patient);  
 	}
 	
 	public PatientType nextPatient()
 	{
-		return stack.peek();
+		return stack.peek();  
 	}
 	
 	public PatientType treatNextPatient()
@@ -41,7 +41,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 		String info = "";
 		for(PatientType p: stack)
 		{
-			info += p.toString();
+			info = p.toString() + info;
 		}
 		
 		return info;

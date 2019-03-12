@@ -86,7 +86,7 @@ public class Driver
                 			hos.addPatient(new Animal(info[0], Integer.parseInt(info[1])));
                 		}
                 	}
-                	else if (choice.equalsIgnoreCase("person"))
+                	else if (choice.equalsIgnoreCase("person")) 
                 	{
                 		System.out.println("[sick] or [healthy].");
                 		String choice2 = reader.readLine();

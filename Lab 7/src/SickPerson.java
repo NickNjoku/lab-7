@@ -10,7 +10,7 @@ public class SickPerson extends Person {
 		super(name, age);
 		this.name = name;
 		this.age = age;
-		this.severity = severity;
+		this.severity = severity;  
 	}
 	
 	
@@ -27,18 +27,18 @@ public class SickPerson extends Person {
 		}
 		SickPerson otherSick = (SickPerson) p;
 		
-		if(this.getSeverity() < otherSick.getSeverity()) 
+		if(this.getSeverity() > otherSick.getSeverity()) 
 		{
 			num = -1;
 		}
-		if(this.getSeverity() > otherSick.getSeverity())
+		if(this.getSeverity() < otherSick.getSeverity())
 		{
 			num = 1;
 		}
 		
 		if(this.getSeverity() == otherSick.getSeverity())
 		{
-			num = 0;
+			num = 0; 
 		}
 		return num;
 		
@@ -48,7 +48,7 @@ public class SickPerson extends Person {
 	
 	public String toString()
 	{
-		return String.format("%s Severity level %d", super.toString(), this.severity);
+		return String.format("%s Severity level %d", super.toString(), this.severity); 
 	}
 	
 	private int getSeverity()
