@@ -41,7 +41,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 		String info = "";
 		for(PatientType p: stack)
 		{
-			info += p;
+			info += p.toString();
 		}
 		
 		return info;

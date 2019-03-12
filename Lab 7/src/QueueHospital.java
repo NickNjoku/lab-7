@@ -41,7 +41,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType>{
 		String info = "";
 		for(PatientType p: patientQueue)
 		{
-			info += p;
+			info += p.toString();
 		}
 		
 		return info;

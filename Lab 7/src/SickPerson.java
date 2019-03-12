@@ -25,7 +25,7 @@ public class SickPerson extends Person {
 			return 0;
 		}
 		
-		if(this.getSeverity() < p)
+		if(this.getSeverity() < p.)
 	}
 	
 	public String toString()
