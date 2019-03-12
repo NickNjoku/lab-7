@@ -19,13 +19,15 @@ public class SickPerson extends Person {
 	protected int compareToImpl(Person p)
 	{
 		
-		
-		if(this.getClass().equals(p.getClass()))
+		if(!(this.getClass().equals(p.getClass())))
 		{
 			return 0;
 		}
 		
-		if(this.getSeverity() < p.)
+		if() 
+		{
+			
+		}
 	}
 	
 	public String toString()
@@ -35,7 +37,7 @@ public class SickPerson extends Person {
 	
 	private int getSeverity()
 	{
-		return severity;
+		return severity; 
 	}
 	
 	
