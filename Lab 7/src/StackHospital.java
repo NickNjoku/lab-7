@@ -18,7 +18,7 @@ public class StackHospital<PatientType> extends Hospital<PatientType> {
 	
 	public PatientType nextPatient()
 	{
-		return stack.peek();  
+		return stack.peek();   
 	}
 	
 	public PatientType treatNextPatient()

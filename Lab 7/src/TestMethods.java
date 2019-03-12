@@ -81,5 +81,19 @@ public class TestMethods {
 		}
 		
 		@Test
+		public void HealthyPersonTest()
+		{
+			Person Cody = new HealthyPerson("Cody", 21, "Checkup");
+			Person Nick = new HealthyPerson("Nick", 21, "Weight");
+			Person Ali = new HealthyPerson("Ali", 21, "Height");
+			Person Tom = new HealthyPerson("Tom", 21, "Vaccine");
+			Person Nick2 = new HealthyPerson("Nick", 21, "Vaccine");
+			
+			Assert.assertEquals(1, Nick.compareToImpl(Cody));
+			Assert.assertEquals(-1, Cody.compareToImpl(Nick));
+			Assert.assertEquals(0, Nick2.compareToImpl(Nick));
+			Assert.assertEquals("Nick, a 21-year old. In for Weight", Nick.toString());
+			
+		}
 
 	}
