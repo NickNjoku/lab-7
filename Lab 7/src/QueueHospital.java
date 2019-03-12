@@ -13,7 +13,7 @@ public class QueueHospital<PatientType> extends Hospital<PatientType>{
 	
 	public void addPatient(PatientType patient)
 	{
-		patientQueue.add(patient);
+		patientQueue.add(patient); 
 	}
 	
 	public PatientType nextPatient()

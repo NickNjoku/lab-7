@@ -13,22 +13,24 @@ public class PriorityQueueHospital <PatientType extends Comparable<PatientType>>
 	}
 	public void addPatient(PatientType patient)
 	{
+		patientQueue.add(patient);
 		Collections.sort((List<PatientType>) patientQueue);
+	
 	}
 	
 	public PatientType nextPatient() 
 	{
-		
+		return patientQueue.element();
 	}
 	
 	public PatientType treatNextPatient()
 	{
-		
+		return patientQueue.remove();
 	}
 	
 	public int numPatients()
 	{
-		
+		return patientQueue.size();
 	}
 	
 	public String hospitalType()
@@ -38,7 +40,13 @@ public class PriorityQueueHospital <PatientType extends Comparable<PatientType>>
 	
 	public String allPatientInfo() 
 	{
+		String info = "";
+		for(PatientType p: patientQueue)
+		{
+			info += p.toString();
+		}
 		
+		return info;
 	}
 
 }
