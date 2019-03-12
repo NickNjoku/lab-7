@@ -3,6 +3,9 @@ import org.junit.Test;
 
 public class TestMethods {
 		
+		
+	
+	
 		@Test
 		public void QueueHospitalTest()
 		{
@@ -94,6 +97,18 @@ public class TestMethods {
 			Assert.assertEquals(0, Nick2.compareToImpl(Nick));
 			Assert.assertEquals("Nick, a 21-year old. In for Weight", Nick.toString());
 			
+		}
+		
+		@Test
+		public void Animal()
+		{
+			Animal Dog = new Animal("Pug", 20);
+			Animal Dog2 = new Animal("Bulldog", 25);
+			
+			Assert.assertEquals(20, Dog.getAge());
+			Assert.assertEquals("Pug", Dog.getBreed());
+			Assert.assertEquals("A 20-year old Pug.", Dog.toString());
+			Assert.assertEquals(5,Dog.compareTo(Dog2));
 		}
 
 	}
