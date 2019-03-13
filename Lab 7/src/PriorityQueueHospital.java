@@ -12,9 +12,9 @@ public class PriorityQueueHospital <PatientType extends Comparable<PatientType>>
 		this.patientQueue = patientQueue; 
 	}
 	public void addPatient(PatientType patient)
-	{
+	{ 
 		patientQueue.add(patient);
-		//Collections.sort((List<PatientType>) patientQueue);
+	
 	
 	}
 	
@@ -26,7 +26,7 @@ public class PriorityQueueHospital <PatientType extends Comparable<PatientType>>
 	
 	public PatientType treatNextPatient()
 	{
-		Collections.sort((List<PatientType>) patientQueue); 
+		Collections.sort((List<PatientType>) patientQueue);  
 		return patientQueue.remove();
 	}
 	

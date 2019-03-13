@@ -1,16 +1,23 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestMethods {
+public class HospitalTest {
 		
-		
+		@Test
+		public void HospitalClassTest()
+		{
+			Hospital<Person> H = new QueueHospital<Person>();
+			Person Nick = new SickPerson("Nick", 19, 25);
+			H.addPatient(Nick);
+			Assert.assertEquals("A QueueHospital-type hospital with 1 patients.", H.toString());
+		}
 	
 	
 		@Test
 		public void QueueHospitalTest()
 		{
 			
-			QueueHospital queue = new QueueHospital();
+			QueueHospital<Person> queue = new QueueHospital<Person>(); 
 			Person Nick = new SickPerson("Nick", 19, 25);
 			Person Bob = new SickPerson("Bob", 25, 12);
 			Person Ali = new SickPerson("Ali", 20, 2);
@@ -24,13 +31,14 @@ public class TestMethods {
 			Assert.assertEquals("Nick, a 19-year old. Severity level 25Bob, a 25-year old. Severity level 12Ali, a 20-year old. Severity level 2", queue.allPatientInfo());
 			Assert.assertEquals(Nick, queue.nextPatient());
 			Assert.assertEquals(Nick, queue.treatNextPatient()); 
+			
 				
 		}
 		
 		@Test
 		public void StackHospitalTest()
 		{
-			StackHospital<Person> stack = new StackHospital();
+			StackHospital<Person> stack = new StackHospital<Person>();
 			Person Nick = new SickPerson("Nick", 19, 25);
 			Person Bob = new SickPerson("Bob", 25, 12);
 			Person Ali = new SickPerson("Ali", 20, 2);
@@ -51,7 +59,7 @@ public class TestMethods {
 		@Test
 		public void PriorityQueueHospital()
 		{
-			PriorityQueueHospital<Person> queue = new PriorityQueueHospital();
+			PriorityQueueHospital<Person> queue = new PriorityQueueHospital<Person>();
 			Person Nick = new SickPerson("Nick", 19, 25);
 			Person Bob = new SickPerson("Bob", 25, 12);
 			Person Ali = new SickPerson("Ali", 20, 2);
@@ -62,9 +70,9 @@ public class TestMethods {
 			
 			Assert.assertEquals(3,queue.numPatients()); 
 			Assert.assertEquals("PriorityQueueHospital", queue.hospitalType());
-			Assert.assertEquals("Ali, a 20-year old. Severity level 2Bob, a 25-year old. Severity level 12Nick, a 19-year old. Severity level 25", queue.allPatientInfo());
-			Assert.assertEquals(Ali, queue.nextPatient());
-			Assert.assertEquals(Ali, queue.treatNextPatient());  
+			Assert.assertEquals("Nick, a 19-year old. Severity level 25Bob, a 25-year old. Severity level 12Ali, a 20-year old. Severity level 2", queue.allPatientInfo());
+			Assert.assertEquals(Nick, queue.nextPatient());
+			Assert.assertEquals(Nick, queue.treatNextPatient());  
 		}
 		
 		@Test
@@ -110,5 +118,7 @@ public class TestMethods {
 			Assert.assertEquals("A 20-year old Pug.", Dog.toString());
 			Assert.assertEquals(5,Dog.compareTo(Dog2));
 		}
+		
+		
 
 	}
